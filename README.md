@@ -8,7 +8,7 @@ cd coforgeRSI
 ./setup.sh
 ```
 
-首次使用登录有仓库 Write 权限的 GitHub 账户，脚本自动领取加密配置、安装 Node/Pi 并启动。打开 **http://127.0.0.1:18766**；以后运行 `./start.sh`。系统依赖、团队权限和凭据说明见 [GITHUB-SETUP.md](GITHUB-SETUP.md)。
+首次使用登录 lrm-lab 成员或本仓库协作者的 GitHub 账户，脚本自动领取加密配置、安装 Node/Pi 并启动，无需代码写权限。打开 **http://127.0.0.1:18766**；以后运行 `./start.sh`。系统依赖、团队权限和凭据说明见 [GITHUB-SETUP.md](GITHUB-SETUP.md)。
 
 以下为原服务器部署与功能说明。
 

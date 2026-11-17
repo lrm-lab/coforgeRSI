@@ -72,9 +72,6 @@ def receive_credentials(refresh=False):
     status = subprocess.run(['gh', 'auth', 'status'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     if status.returncode:
         run(['gh', 'auth', 'login', '--hostname', 'github.com', '--web'])
-    permission = json.loads(capture(['gh', 'api', f'repos/{REPO}'])).get('permissions', {})
-    if not permission.get('push'):
-        raise SystemExit('团队凭据领取需要此仓库的 Write 权限。请让 lrm-lab 管理员授予团队 Write 权限后重试。')
     request_id = uuid.uuid4().hex
     print('正在通过 GitHub Actions 领取加密配置，通常需要 1–2 分钟…', flush=True)
     with tempfile.TemporaryDirectory(prefix='rsi-bootstrap-') as temporary:
@@ -83,19 +80,25 @@ def receive_credentials(refresh=False):
         run(['openssl', 'req', '-x509', '-newkey', 'rsa:3072', '-nodes',
              '-keyout', str(key), '-out', str(cert), '-days', '1',
              '-subj', '/CN=RSI-team-bootstrap/'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        payload = {'ref': 'main', 'inputs': {'request_id': request_id, 'recipient_cert': cert.read_text()}}
+        payload = {'title': f'RSI bootstrap {request_id}',
+                   'body': json.dumps({'request_id': request_id, 'recipient_cert': cert.read_text()})}
         # Structured stdin prevents workflow inputs from being interpreted by a shell.
         result = subprocess.run(['gh', 'api', '--method', 'POST',
-                                 f'repos/{REPO}/actions/workflows/team-bootstrap.yml/dispatches', '--input', '-'],
+                                 f'repos/{REPO}/issues', '--input', '-'],
                                 input=json.dumps(payload), text=True, capture_output=True)
         if result.returncode:
-            raise SystemExit('无法启动团队配置工作流；请检查仓库 Write 权限和 Actions 是否已启用。')
+            raise SystemExit('无法创建团队配置请求；请检查 GitHub 登录状态、仓库 Issues 和 Actions 是否已启用。')
+        request = json.loads(result.stdout)
+        if request.get('author_association') not in ('MEMBER', 'OWNER', 'COLLABORATOR'):
+            subprocess.run(['gh', 'api', '--method', 'PATCH', f"repos/{REPO}/issues/{request['number']}",
+                            '-f', 'state=closed'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            raise SystemExit('此 GitHub 账户不是 lrm-lab 成员或仓库协作者，无法领取团队凭据。')
         deadline = time.monotonic() + 600
         job = None
         last_status = None
         while time.monotonic() < deadline:
             runs = json.loads(capture(['gh', 'run', 'list', '-R', REPO, '--workflow', 'team-bootstrap.yml',
-                                      '--event', 'workflow_dispatch', '--limit', '100',
+                                      '--event', 'issues', '--limit', '100',
                                       '--json', 'databaseId,displayTitle,status,conclusion,url']))
             job = next((r for r in runs if r['displayTitle'] == f'RSI bootstrap {request_id}'), None)
             if job:

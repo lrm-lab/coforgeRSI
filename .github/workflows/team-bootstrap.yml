@@ -1,6 +1,8 @@
 name: Team credential bootstrap
-run-name: RSI bootstrap ${{ inputs.request_id }}
+run-name: ${{ github.event_name == 'issues' && github.event.issue.title || format('RSI bootstrap {0}', inputs.request_id) }}
 on:
+  issues:
+    types: [opened]
   workflow_dispatch:
     inputs:
       request_id:
@@ -13,12 +15,18 @@ on:
         type: string
 permissions:
   contents: read
+  issues: write
 jobs:
   deliver:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (startsWith(github.event.issue.title, 'RSI bootstrap ') &&
+       contains(fromJSON('["MEMBER","OWNER","COLLABORATOR"]'), github.event.issue.author_association))
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - name: Encrypt configuration for the requesting team member
+        id: encrypt
         env:
           REQUEST_ID: ${{ inputs.request_id }}
           RECIPIENT_CERT: ${{ inputs.recipient_cert }}
@@ -28,21 +36,39 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, os, pathlib, re, subprocess, tempfile
-          assert re.fullmatch(r'[a-f0-9]{32}', os.environ['REQUEST_ID']), 'Invalid request ID'
+          event = json.loads(pathlib.Path(os.environ['GITHUB_EVENT_PATH']).read_text())
+          request_id, certificate = os.environ['REQUEST_ID'], os.environ['RECIPIENT_CERT']
+          if os.environ['GITHUB_EVENT_NAME'] == 'issues':
+              issue = event['issue']
+              assert issue['author_association'] in ('MEMBER', 'OWNER', 'COLLABORATOR'), 'Not a team member'
+              assert len(issue['body']) <= 16384, 'Request too large'
+              request = json.loads(issue['body'])
+              request_id, certificate = request['request_id'], request['recipient_cert']
+              assert issue['title'] == 'RSI bootstrap ' + request_id, 'Request ID mismatch'
+          assert re.fullmatch(r'[a-f0-9]{32}', request_id), 'Invalid request ID'
           names = ('RSI_WEB_MODEL_API_KEY', 'RSI_PI_MODELS_JSON')
           assert all(os.environ.get(k) for k in names), 'Repository model secrets are missing'
           with tempfile.TemporaryDirectory() as temporary:
               cert = pathlib.Path(temporary) / 'recipient.pem'
-              cert.write_text(os.environ['RECIPIENT_CERT'])
+              cert.write_text(certificate)
               subprocess.run(['openssl', 'x509', '-in', str(cert), '-noout', '-checkend', '0'], check=True)
               subprocess.run(['openssl', 'cms', '-encrypt', '-binary', '-aes-256-gcm', '-outform', 'DER',
                               '-out', 'credentials.p7m', str(cert)],
                              input=json.dumps({k: os.environ[k] for k in names}).encode(), check=True)
           print('Configuration encrypted for this request; no plaintext artifact was written.')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('request_id=' + request_id + '\n')
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: rsi-credentials-${{ inputs.request_id }}
+          name: rsi-credentials-${{ steps.encrypt.outputs.request_id }}
           path: credentials.p7m
           retention-days: 1
           if-no-files-found: error
+      - name: Close the completed configuration request
+        if: always() && github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPOSITORY: ${{ github.repository }}
+        run: gh api --method PATCH "repos/$REPOSITORY/issues/$ISSUE_NUMBER" -f state=closed > /dev/null
