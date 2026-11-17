@@ -1,0 +1,200 @@
+{
+  "task_id": "5cfb274c-0207-4aa7-9575-6ac0bd95d9b2",
+  "dataset": "gaia-benchmark/GAIA",
+  "split": "2023/validation",
+  "level": "1",
+  "task_description": "Determine whether a closed walk through all owned plots is possible from the colors in the supplied Excel workbook.",
+  "selection_rule": "First level1 xlsx/csv/txt attachment in official row order, before inspecting answers or model runs.",
+  "dataset_revision": "682dd723ee1e1697e00360edccf2366dc8418dd9",
+  "metadata_revision_verified": true,
+  "attachment_sha256": "439ea4a6a10b6121d7f386d84e69e606b073f32a6d82fad639587f98f468cf1f",
+  "attachment_bytes": 5115,
+  "controller_status": "solved",
+  "controller_reason": "Revised experience passed fresh repeated environmental verification",
+  "same_controller_as_delivered_package": true,
+  "host": "143, same controller code as delivered on144",
+  "model_sessions": [
+    {
+      "provider": "zhizengzeng",
+      "model": "deepseek-v4.1-flash"
+    }
+  ],
+  "agent_calls": 8,
+  "verifier_calls": 3,
+  "revision_rounds": 1,
+  "total_model_tokens_including_cache": 1186156,
+  "unknown_usage_calls": [],
+  "total_model_cost_usd": null,
+  "elapsed_seconds": 679.671,
+  "validated_experience_count": 1,
+  "final_answer": {
+    "answer": "No"
+  },
+  "attempts": [
+    {
+      "id": "baseline",
+      "stage": "baseline",
+      "valid": false,
+      "passed": false,
+      "score": 0.0,
+      "timed_out": true,
+      "elapsed_seconds": 180.08101511001587,
+      "total_tokens": 112056,
+      "submitted_answer": null,
+      "evidence_artifact_exists": false,
+      "program_files": [],
+      "input_attachment_unchanged": true
+    },
+    {
+      "id": "round-0-candidate-0-validation-0",
+      "stage": "validation",
+      "valid": true,
+      "passed": true,
+      "score": 1.0,
+      "timed_out": false,
+      "elapsed_seconds": 47.03773379325867,
+      "total_tokens": 70620,
+      "submitted_answer": {
+        "answer": "No"
+      },
+      "evidence_artifact_exists": true,
+      "program_files": [
+        "analyze.py"
+      ],
+      "input_attachment_unchanged": true
+    },
+    {
+      "id": "round-0-candidate-0-validation-1",
+      "stage": "validation",
+      "valid": true,
+      "passed": true,
+      "score": 1.0,
+      "timed_out": false,
+      "elapsed_seconds": 39.11309623718262,
+      "total_tokens": 70549,
+      "submitted_answer": {
+        "answer": "No"
+      },
+      "evidence_artifact_exists": true,
+      "program_files": [
+        "analyze.py"
+      ],
+      "input_attachment_unchanged": true
+    },
+    {
+      "id": "round-0-candidate-0",
+      "stage": "exploration",
+      "valid": true,
+      "passed": true,
+      "score": 1.0,
+      "timed_out": false,
+      "elapsed_seconds": 65.04741048812866,
+      "total_tokens": 175540,
+      "submitted_answer": {
+        "answer": "No"
+      },
+      "evidence_artifact_exists": true,
+      "program_files": [
+        "analyze.py"
+      ],
+      "input_attachment_unchanged": true
+    },
+    {
+      "id": "round-0-candidate-1",
+      "stage": "exploration",
+      "valid": false,
+      "passed": false,
+      "score": 0.0,
+      "timed_out": true,
+      "elapsed_seconds": 180.11193466186523,
+      "total_tokens": 477247,
+      "submitted_answer": {
+        "answer": "No"
+      },
+      "evidence_artifact_exists": true,
+      "program_files": [
+        "analyze.py",
+        "ham_closure.py",
+        "stress_prune.py",
+        "validate_solver.py"
+      ],
+      "input_attachment_unchanged": true
+    }
+  ],
+  "trace_summary": [
+    {
+      "call_id": "baseline",
+      "tool_calls": 13,
+      "skill_read_operations": 1,
+      "xlsx_related_operations": 3,
+      "protected_reference_mentions_in_tool_arguments": 0
+    },
+    {
+      "call_id": "bootstrap",
+      "tool_calls": 7,
+      "skill_read_operations": 1,
+      "xlsx_related_operations": 3,
+      "protected_reference_mentions_in_tool_arguments": 0
+    },
+    {
+      "call_id": "decision-0",
+      "tool_calls": 10,
+      "skill_read_operations": 1,
+      "xlsx_related_operations": 1,
+      "protected_reference_mentions_in_tool_arguments": 0
+    },
+    {
+      "call_id": "research-initial",
+      "tool_calls": 16,
+      "skill_read_operations": 1,
+      "xlsx_related_operations": 5,
+      "protected_reference_mentions_in_tool_arguments": 0
+    },
+    {
+      "call_id": "round-0-candidate-0",
+      "tool_calls": 13,
+      "skill_read_operations": 2,
+      "xlsx_related_operations": 7,
+      "protected_reference_mentions_in_tool_arguments": 0
+    },
+    {
+      "call_id": "round-0-candidate-0-validation-0",
+      "tool_calls": 8,
+      "skill_read_operations": 1,
+      "xlsx_related_operations": 4,
+      "protected_reference_mentions_in_tool_arguments": 0
+    },
+    {
+      "call_id": "round-0-candidate-0-validation-1",
+      "tool_calls": 7,
+      "skill_read_operations": 1,
+      "xlsx_related_operations": 3,
+      "protected_reference_mentions_in_tool_arguments": 0
+    },
+    {
+      "call_id": "round-0-candidate-1",
+      "tool_calls": 20,
+      "skill_read_operations": 1,
+      "xlsx_related_operations": 5,
+      "protected_reference_mentions_in_tool_arguments": 0
+    }
+  ],
+  "any_protected_reference_tool_mentions": false,
+  "limits": {
+    "max_rounds": 2,
+    "max_agent_calls": 18,
+    "max_verifier_calls": 16,
+    "max_seconds": 900,
+    "agent_timeout": 180,
+    "verifier_timeout": 15,
+    "parallelism": 2,
+    "verification_repeats": 2,
+    "max_tokens": 1200000,
+    "max_cost_usd": null
+  },
+  "skill": "spreadsheet-evidence, generic extraction guidance with no reference answer",
+  "skill_validation": "skill-creator quick_validate passed; actual read operations counted in trace_summary",
+  "reference_visibility": "Official answers and full metadata were outside all worker inputs. Grader returned pass/fail only; tool requests were audited. This is not an OS security sandbox.",
+  "scoring": "Official GAIA question_scorer; only unused numpy import removed; source SHA256 0d44c07f3046eec521697c22e3eaca8719cc81e422a8eaf32695c5f22bdac6e2",
+  "qualification": "One selected development item with adaptive feedback, shared research findings and fresh execution workspaces; not an official leaderboard evaluation, a held-out transfer result, or statistically independent trials."
+}

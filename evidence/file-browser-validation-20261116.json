@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-16T03:33:00.745876+00:00",
+  "url": "http://10.110.158.144:18766/?job=20261116-095703-f25eb413#files",
+  "tests": {
+    "file_access": 5,
+    "execution_trace_and_config": 9,
+    "http_integration": 1,
+    "passed": 15
+  },
+  "browser": {
+    "relative_css": true,
+    "relative_module_js": true,
+    "parent_access_blocked": true,
+    "source_as_text": true,
+    "zip_download": true,
+    "new_files_appear_during_polling": true,
+    "desktop_mobile": true,
+    "page_errors": 0
+  },
+  "model_config": {
+    "max_output_tokens": 32768,
+    "shared_config_changed": false,
+    "real_pi_smoke_ok": true
+  },
+  "existing_task": {
+    "replayed_by_this_change": false,
+    "running_controller_preserved_during_restart": true
+  }
+}

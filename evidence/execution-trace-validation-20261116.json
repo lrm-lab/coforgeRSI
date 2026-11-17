@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-16T02:54:43.210759+00:00",
+  "url": "http://10.110.158.144:18766/",
+  "tests": {
+    "trace_regression": 8,
+    "rsi_controller": 32,
+    "http_integration": 1,
+    "passed": 41
+  },
+  "browser": {
+    "desktop": [
+      1440,
+      1000
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "page_errors": 0,
+    "horizontal_overflow": false,
+    "collapse_survives_polling": true
+  },
+  "historical_job": "20261116-095703-f25eb413",
+  "historical_tools": 33,
+  "historical_outputs": 33,
+  "failure": "Both bootstrap calls ended with stopReason=length, final output=8192 tokens, process exit=0, no timeout",
+  "new_model_calls": 0,
+  "historical_job_replayed": false,
+  "original_runtime_preserved": true,
+  "limitation": "Bounded truncation repair tested with scripted backend; no new real-model outcome claimed."
+}

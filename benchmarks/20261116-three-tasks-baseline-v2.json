@@ -1,0 +1,28 @@
+{
+  "batch": "20261116-three-tasks-baseline-v2",
+  "policy": "baseline_floor_v2",
+  "mode": "FIFO; advance on completion or 3h deadline",
+  "jobs": [
+    {
+      "id": "20261116-182333-2d188fd5",
+      "task_id": "01_Productivity_Flow_task_2_table_tex_download",
+      "label": "论文原始 LaTeX 表格恢复",
+      "max_seconds": 10800,
+      "url": "http://10.110.158.144:18766/?job=20261116-182333-2d188fd5#evolution"
+    },
+    {
+      "id": "20261116-182333-1c4b6ffa",
+      "task_id": "01_Productivity_Flow_task_3_bibtex",
+      "label": "受损 PDF 识别、重命名与 BibTeX 恢复",
+      "max_seconds": 10800,
+      "url": "http://10.110.158.144:18766/?job=20261116-182333-1c4b6ffa#evolution"
+    },
+    {
+      "id": "20261116-182333-53711560",
+      "task_id": "01_Productivity_Flow_task_10_pdf_digest",
+      "label": "65 篇论文分类与表格提取",
+      "max_seconds": 10800,
+      "url": "http://10.110.158.144:18766/?job=20261116-182333-53711560#evolution"
+    }
+  ]
+}

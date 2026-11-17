@@ -1,0 +1,52 @@
+{
+  "validated_at": "2026-11-16T06:54:44.767479+00:00",
+  "changes": [
+    "readable_partial_acceptance",
+    "attempt_score_bars",
+    "component_scores",
+    "method_diff_colors",
+    "historical_revision_graph",
+    "completed_jobs",
+    "recorded_gaia_graph"
+  ],
+  "unit_tests": {
+    "passed": 28,
+    "command": "python3 -m unittest -q test_evolution_evidence test_execution_trace test_workspace_files"
+  },
+  "integration_tests": {
+    "passed": 1,
+    "command": "python3 test_web.py",
+    "mode": "explicit scripted fixture, no model calls"
+  },
+  "browser": {
+    "endpoint": "http://10.110.158.144:18766",
+    "desktop_width": 1512,
+    "mobile_width": 390,
+    "historical_nodes": 6,
+    "historical_edges": 5,
+    "unexecuted_rejected_proposal": "e1",
+    "actual_parent_method_diffs": true,
+    "arxiv_components": 3,
+    "completed_jobs_checked": 4,
+    "gaia_versions": 3,
+    "gaia_attempts": 5,
+    "page_errors": [],
+    "mobile_overflow": false
+  },
+  "controller": {
+    "pid": 13447,
+    "start_ticks": "3982547095",
+    "alive_before_and_after_restart": true
+  },
+  "active_benchmark_at_validation": {
+    "id": "20261116-141624-4f74a96d",
+    "baseline_score": 0.9667,
+    "baseline_failed_item": "metadata_dr_seg",
+    "candidates": [
+      "B",
+      "C"
+    ],
+    "status": "running"
+  },
+  "qualification": "Only UI and read-only evidence adapters changed. Historical scores remain separate from the fresh run; replay lacks full method text and shows no invented diff."
+}

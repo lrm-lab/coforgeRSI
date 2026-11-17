@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.rsi/
+*.egg-info/
+dist/
+build/
+.env
+.env.*
+auth.json

@@ -1,0 +1,25 @@
+{"time": 1794652806.5864623, "type": "agent_started", "call_id": "bootstrap", "role": "bootstrap"}
+{"time": 1794652842.480729, "type": "agent_finished", "call_id": "bootstrap", "role": "bootstrap", "ok": true}
+{"time": 1794652842.5101287, "type": "acceptance_sealed", "authority": "user_provided"}
+{"time": 1794652842.514141, "type": "agent_started", "call_id": "research-initial", "role": "research"}
+{"time": 1794652983.0693753, "type": "agent_finished", "call_id": "research-initial", "role": "research", "ok": true}
+{"time": 1794652983.070583, "type": "research_recorded", "research_id": "research-initial", "failed": false}
+{"time": 1794652983.1049306, "type": "agent_started", "call_id": "baseline", "role": "worker"}
+{"time": 1794653163.239409, "type": "agent_finished", "call_id": "baseline", "role": "worker", "ok": false}
+{"time": 1794653163.2658772, "type": "environment_result", "attempt_id": "baseline", "stage": "baseline", "experience_id": "baseline", "valid": false, "passed": false, "score": 0.0}
+{"time": 1794653163.271425, "type": "agent_started", "call_id": "decision-0", "role": "planner"}
+{"time": 1794653219.2812707, "type": "agent_finished", "call_id": "decision-0", "role": "planner", "ok": true}
+{"time": 1794653219.3305252, "type": "agent_started", "call_id": "round-0-candidate-1", "role": "worker"}
+{"time": 1794653219.3310833, "type": "agent_started", "call_id": "round-0-candidate-0", "role": "worker"}
+{"time": 1794653284.4323232, "type": "agent_finished", "call_id": "round-0-candidate-0", "role": "worker", "ok": true}
+{"time": 1794653284.5544856, "type": "environment_result", "attempt_id": "round-0-candidate-0", "stage": "exploration", "experience_id": "round-0-candidate-0", "valid": true, "passed": true, "score": 1.0}
+{"time": 1794653399.5400531, "type": "agent_finished", "call_id": "round-0-candidate-1", "role": "worker", "ok": false}
+{"time": 1794653399.573228, "type": "environment_result", "attempt_id": "round-0-candidate-1", "stage": "exploration", "experience_id": "round-0-candidate-1", "valid": false, "passed": false, "score": 0.0}
+{"time": 1794653399.614042, "type": "agent_started", "call_id": "round-0-candidate-0-validation-0", "role": "worker"}
+{"time": 1794653446.6952398, "type": "agent_finished", "call_id": "round-0-candidate-0-validation-0", "role": "worker", "ok": true}
+{"time": 1794653446.8650415, "type": "environment_result", "attempt_id": "round-0-candidate-0-validation-0", "stage": "validation", "experience_id": "round-0-candidate-0", "valid": true, "passed": true, "score": 1.0}
+{"time": 1794653446.8941243, "type": "agent_started", "call_id": "round-0-candidate-0-validation-1", "role": "worker"}
+{"time": 1794653486.0481744, "type": "agent_finished", "call_id": "round-0-candidate-0-validation-1", "role": "worker", "ok": true}
+{"time": 1794653486.2175303, "type": "environment_result", "attempt_id": "round-0-candidate-0-validation-1", "stage": "validation", "experience_id": "round-0-candidate-0", "valid": true, "passed": true, "score": 1.0}
+{"time": 1794653486.218836, "type": "experience_retained", "candidate_id": "round-0-candidate-0", "parent_id": "baseline", "gate": {"accepted": true, "reasons": [], "parent_mean_score": 0, "validation_mean_score": 1.0, "quality_gain": true, "token_gain": true, "parent_mean_tokens": 112056, "validation_mean_tokens": 70584.5}}
+{"time": 1794653486.2499185, "type": "goal_verified", "attempt_id": "round-0-candidate-0-validation-1", "experience_id": "round-0-candidate-0", "verifier_authority": "user_provided"}

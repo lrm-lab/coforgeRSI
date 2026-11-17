@@ -1,0 +1,15 @@
+{
+  "suite": "WildClawBench",
+  "task_id": "01_Productivity_Flow_task_10_pdf_digest",
+  "category": "01_Productivity_Flow",
+  "label": "65 篇论文分类与表格提取",
+  "source_url": "https://github.com/InternLM/WildClawBench/blob/main/tasks/01_Productivity_Flow/01_Productivity_Flow_task_10_pdf_digest.md",
+  "task_sha256": "8b14eb32b1c9bd71e56447cd6b7f5eed310918be282fbc3bdf36af613829ce5b",
+  "grader_sha256": "fde9b0f76f3a22f6e108a37b8accdd8c0a7169f0b5d20fe2b643bfcbbc6d7cb6",
+  "fixture_sha256": {
+    "papers.tar": "474c2a204a878c2a38b6e7f91971e79c9f45b478ebcef7625ec28a1046f3a107",
+    "ground_truth.json": "7242785d45435ae7f5b9cec7981ab6c2c12081778059200fe56e22c0bbfc1e1c"
+  },
+  "adaptation": "Workspace and private ground-truth paths only; official scoring unchanged.",
+  "note": "官方题目、附件及原评分器；本次采用 RSI/Pi、每题最多三小时和 baseline 底线采纳规则，非官方限时排行榜复现。"
+}

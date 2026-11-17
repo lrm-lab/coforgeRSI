@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "type": "pi",
+    "provider": "zhizengzeng",
+    "model": "deepseek-v4.1-flash",
+    "env_file": "~/.pi/agent/zhizengzeng.env",
+    "args": ["--offline"]
+  },
+  "limits": {
+    "max_rounds": 10,
+    "max_agent_calls": 40,
+    "max_verifier_calls": 40,
+    "max_seconds": null,
+    "agent_timeout": null,
+    "verifier_timeout": null,
+    "parallelism": 2,
+    "verification_repeats": 2
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "retrieved_at_utc": "2026-11-14T09:50:23.730290+00:00",
+  "repositories": {
+    "loopx": {
+      "requested_repository": "loopx-project/loopx",
+      "errors": [],
+      "repository": "loopx-project/loopx",
+      "url": "https://github.com/loopx-project/loopx",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-14T09:48:39Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "commit": "dd53ca52184cb6283e4728301fa996f8cd7b2ca0",
+      "committed_at": "2026-11-14T09:41:30Z",
+      "tree_truncated": false,
+      "file_count": 7562,
+      "readme": {
+        "url": "https://raw.githubusercontent.com/loopx-project/loopx/dd53ca52184cb6283e4728301fa996f8cd7b2ca0/README.md",
+        "sha256": "1861afcd781e4a1695834421db52becfc6d9ddebd267b02dc8b564b314a1c473"
+      },
+      "latest_release": {
+        "tag_name": "v2.3.0",
+        "published_at": "2026-11-09T01:58:15Z",
+        "prerelease": false,
+        "html_url": "https://github.com/loopx-project/loopx/releases/tag/v2.3.0"
+      }
+    },
+    "openevolve": {
+      "requested_repository": "algorithmicsuperintelligence/openevolve",
+      "errors": [],
+      "repository": "algorithmicsuperintelligence/openevolve",
+      "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-08T22:50:07Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "commit": "3e72b5bcce27cdd948d8cdff2fa00e67c4d6066c",
+      "committed_at": "2026-11-08T22:50:07Z",
+      "tree_truncated": false,
+      "file_count": 595,
+      "readme": {
+        "url": "https://raw.githubusercontent.com/algorithmicsuperintelligence/openevolve/3e72b5bcce27cdd948d8cdff2fa00e67c4d6066c/README.md",
+        "sha256": "66747e4006d03c8f7dc5f2cdc5578fa68cdd587098518effede95a7de0571766"
+      },
+      "latest_release": {
+        "tag_name": "v0.4.1",
+        "published_at": "2026-11-02T06:35:08Z",
+        "prerelease": false,
+        "html_url": "https://github.com/algorithmicsuperintelligence/openevolve/releases/tag/v0.4.1"
+      }
+    },
+    "shinka": {
+      "requested_repository": "SakanaAI/ShinkaEvolve",
+      "errors": [],
+      "repository": "SakanaAI/ShinkaEvolve",
+      "url": "https://github.com/SakanaAI/ShinkaEvolve",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-13T21:04:30Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "commit": "7ab55d7254d2732b26d9c30dde23ab777de631cb",
+      "committed_at": "2026-11-13T21:02:08Z",
+      "tree_truncated": false,
+      "file_count": 361,
+      "readme": {
+        "url": "https://raw.githubusercontent.com/SakanaAI/ShinkaEvolve/7ab55d7254d2732b26d9c30dde23ab777de631cb/README.md",
+        "sha256": "59479b30a6292024ee0d32ccf156e96539d7221ca259402b1dc41aa59ebb666c"
+      },
+      "latest_release": {
+        "tag_name": "v0.0.8",
+        "published_at": "2026-11-13T21:05:57Z",
+        "prerelease": false,
+        "html_url": "https://github.com/SakanaAI/ShinkaEvolve/releases/tag/v0.0.8"
+      }
+    },
+    "dgm": {
+      "requested_repository": "kew-lab/darwin-godel-machine",
+      "errors": [],
+      "repository": "kew-lab/darwin-godel-machine",
+      "url": "https://github.com/kew-lab/darwin-godel-machine",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2025-08-13T10:40:14Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "commit": "a565fd2d1dca504ef5104a7cc0f3bdc4ab9b4fd2",
+      "committed_at": "2025-08-13T10:40:14Z",
+      "tree_truncated": false,
+      "file_count": 1650,
+      "readme": {
+        "url": "https://raw.githubusercontent.com/kew-lab/darwin-godel-machine/a565fd2d1dca504ef5104a7cc0f3bdc4ab9b4fd2/README.md",
+        "sha256": "9760f30330e519946592ae88178f579dd717c3e55d3d461322e5facfa09c6bd4"
+      },
+      "latest_release_lookup_error": "HTTP Error 404: Not Found"
+    },
+    "gepa": {
+      "requested_repository": "gepa-ai/gepa",
+      "errors": [],
+      "repository": "gepa-ai/gepa",
+      "url": "https://github.com/gepa-ai/gepa",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-11-09T12:46:31Z",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "commit": "ce5b0d6e3d6af6c6dbec6de2c54536bbb961d309",
+      "committed_at": "2026-11-09T09:07:36Z",
+      "tree_truncated": false,
+      "file_count": 621,
+      "readme": {
+        "url": "https://raw.githubusercontent.com/gepa-ai/gepa/ce5b0d6e3d6af6c6dbec6de2c54536bbb961d309/README.md",
+        "sha256": "6ae94905435aac03ee7006c07b58d7b2518ef1bfd57230fa259d28ab0eb7c540"
+      },
+      "latest_release": {
+        "tag_name": "v0.1.4",
+        "published_at": "2026-07-15T14:50:58Z",
+        "prerelease": false,
+        "html_url": "https://github.com/gepa-ai/gepa/releases/tag/v0.1.4"
+      }
+    },
+    "cobench": {
+      "requested_repository": "sunnweiwei/CO-Bench",
+      "errors": [],
+      "repository": "sunnweiwei/CO-Bench",
+      "url": "https://github.com/sunnweiwei/CO-Bench",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-05-17T21:14:20Z",
+      "license": null,
+      "commit": "2f6620ba5cc8d80d6fefc121b5ee2c4dcec29f33",
+      "committed_at": "2026-05-17T21:14:20Z",
+      "tree_truncated": false,
+      "file_count": 198,
+      "readme": {
+        "url": "https://raw.githubusercontent.com/sunnweiwei/CO-Bench/2f6620ba5cc8d80d6fefc121b5ee2c4dcec29f33/README.md",
+        "sha256": "eb86ab7b64b6730ed17c4cfe3376781d052775d4dbce16862473f39384f5586b"
+      },
+      "latest_release_lookup_error": "HTTP Error 404: Not Found"
+    },
+    "hyperagents": {
+      "requested_repository": "facebookresearch/Hyperagents",
+      "errors": [],
+      "repository": "facebookresearch/HyperAgents",
+      "url": "https://github.com/facebookresearch/HyperAgents",
+      "default_branch": "main",
+      "archived": false,
+      "pushed_at": "2026-07-31T16:56:22Z",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "commit": "59a68f672dfb92c74aeb7e61535d776fb36e172d",
+      "committed_at": "2026-04-14T19:07:47Z",
+      "tree_truncated": false,
+      "file_count": 145,
+      "readme": {
+        "url": "https://raw.githubusercontent.com/facebookresearch/Hyperagents/59a68f672dfb92c74aeb7e61535d776fb36e172d/README.md",
+        "sha256": "d4b72ab8e622f58d963cc8b93cc71246dcfe50c7d798d835a042c4c847e1e9fa"
+      },
+      "latest_release_lookup_error": "HTTP Error 404: Not Found"
+    }
+  },
+  "boundary": "Public source downloads only. No packages installed, project code executed, experiment/model calls or original experiment modifications."
+}

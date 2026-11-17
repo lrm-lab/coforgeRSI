@@ -1,0 +1,356 @@
+{
+  "verified_at_utc": "2026-11-16T10:24:50.347825+00:00",
+  "policy": "baseline_floor_v2",
+  "rules": [
+    "two distinct valid repeats, each score >= initial baseline mean",
+    "ties and drops from a candidate peak or parent allowed",
+    "token savings optional",
+    "finish from an actually passing artifact after retention"
+  ],
+  "verification": {
+    "core_tests": 37,
+    "web_evidence_review_queue_tests": 17,
+    "workspace_file_tests": 6,
+    "http_integration_tests": 1,
+    "all_passed": true,
+    "browser_page_errors": [],
+    "mobile_overflow": false,
+    "short_deadline_fifo_three_process_test_passed": true
+  },
+  "original_job_review": {
+    "job_id": "20261116-141624-4f74a96d",
+    "retained_versions": [
+      "B",
+      "D"
+    ],
+    "selected_method": "B",
+    "original_agent_calls_unchanged": 24,
+    "original_state_and_attempts_preserved": true,
+    "old_runtime_hashes_match_all_sealed_implementation_hashes": true
+  },
+  "queue": [
+    {
+      "id": "20261116-182333-53711560",
+      "question": "排队 3/3 · 65 篇论文分类与表格提取（最多3小时）",
+      "mode": "custom",
+      "status": "queued",
+      "created_at": 1794824613.5028052,
+      "running": false,
+      "agent_calls": 0,
+      "verifier_calls": 0,
+      "round_index": 0,
+      "known_tokens": 0,
+      "validated_experience_count": 0,
+      "reason": "",
+      "retention_review": null,
+      "attachments": [
+        {
+          "name": "papers.tar",
+          "bytes": 686103552,
+          "kind": "benchmark input"
+        }
+      ],
+      "fixture": false,
+      "benchmark": {
+        "suite": "WildClawBench",
+        "task_id": "01_Productivity_Flow_task_10_pdf_digest",
+        "category": "01_Productivity_Flow",
+        "label": "65 篇论文分类与表格提取",
+        "source_url": "https://github.com/InternLM/WildClawBench/blob/main/tasks/01_Productivity_Flow/01_Productivity_Flow_task_10_pdf_digest.md",
+        "task_sha256": "8b14eb32b1c9bd71e56447cd6b7f5eed310918be282fbc3bdf36af613829ce5b",
+        "grader_sha256": "fde9b0f76f3a22f6e108a37b8accdd8c0a7169f0b5d20fe2b643bfcbbc6d7cb6",
+        "fixture_sha256": {
+          "papers.tar": "474c2a204a878c2a38b6e7f91971e79c9f45b478ebcef7625ec28a1046f3a107",
+          "ground_truth.json": "7242785d45435ae7f5b9cec7981ab6c2c12081778059200fe56e22c0bbfc1e1c"
+        },
+        "adaptation": "Workspace and private ground-truth paths only; official scoring unchanged.",
+        "note": "官方题目、附件及原评分器；本次采用 RSI/Pi、每题最多三小时和 baseline 底线采纳规则，非官方限时排行榜复现。"
+      },
+      "verifier_authority": null,
+      "limits": {
+        "max_seconds": 10800,
+        "agent_timeout": null,
+        "verifier_timeout": null,
+        "max_agent_calls": 10000,
+        "max_verifier_calls": 10000,
+        "max_rounds": 1000,
+        "parallelism": 2,
+        "verification_repeats": 2
+      },
+      "acceptance": [],
+      "queue_position": 2,
+      "queue_batch": "20261116-three-tasks-baseline-v2",
+      "started_at": null,
+      "deadline": null
+    },
+    {
+      "id": "20261116-182333-1c4b6ffa",
+      "question": "排队 2/3 · 受损 PDF 识别、重命名与 BibTeX 恢复（最多3小时）",
+      "mode": "custom",
+      "status": "queued",
+      "created_at": 1794824613.501805,
+      "running": false,
+      "agent_calls": 0,
+      "verifier_calls": 0,
+      "round_index": 0,
+      "known_tokens": 0,
+      "validated_experience_count": 0,
+      "reason": "",
+      "retention_review": null,
+      "attachments": [
+        {
+          "name": "2489e1b1a4830c47c93322340d8a9f61.pdf",
+          "bytes": 1818194,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "2959f681e57b94946d8d83e63108743b.pdf",
+          "bytes": 1093777,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "4de47fd19b562f6d80b38ca25c100e34.pdf",
+          "bytes": 747855,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "4fb4a8c10c244047b34b98f0802ef736.pdf",
+          "bytes": 252451,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "695b9b59dee6083f338f50f697bbc0a8.pdf",
+          "bytes": 31848492,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "6d7048c05f54c7810f325586cb691275.pdf",
+          "bytes": 6329953,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "757d0bb0887db877663297fbb1ac0f93.pdf",
+          "bytes": 6946266,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "89c977567a6162eb19c09946d25d4e7f.pdf",
+          "bytes": 1524734,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "a1545d8c44f7879527b4bfdc2d550962.pdf",
+          "bytes": 28337581,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "a9c8098ce76332faaa6e24a10098bd88.pdf",
+          "bytes": 6502878,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "b059bfe6b011cb483c719fd293f13f7b.pdf",
+          "bytes": 11828548,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "b8b730d1313f51fef24a5a81e46e292f.pdf",
+          "bytes": 12853939,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "ce85fc04493b4ec6ab8e4d174ddbe8e1.pdf",
+          "bytes": 320228,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "d197b59e06827356f606ff41a479f4ee.pdf",
+          "bytes": 10398125,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "d2bcd6b1d8428116ffe3df31e783e72a.pdf",
+          "bytes": 1844642,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "e4b6db4b71fd970057e5b48a2e4e26ea.pdf",
+          "bytes": 1197690,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "e522f06ccdb0216fef37f1b591d9dc1f.pdf",
+          "bytes": 187754,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "e5f870f54750f54b87de5634c9d5e075.pdf",
+          "bytes": 1797405,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "e9b81fe821dc398c0644e1dda2fab714.pdf",
+          "bytes": 3391658,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "f62a2ebbbe16dc365c992371aff60ea2.pdf",
+          "bytes": 25371842,
+          "kind": "benchmark input"
+        },
+        {
+          "name": "fe790c3e46d18e0c3d6ed08a26d1e322.pdf",
+          "bytes": 890663,
+          "kind": "benchmark input"
+        }
+      ],
+      "fixture": false,
+      "benchmark": {
+        "suite": "WildClawBench",
+        "task_id": "01_Productivity_Flow_task_3_bibtex",
+        "category": "01_Productivity_Flow",
+        "label": "受损 PDF 识别、重命名与 BibTeX 恢复",
+        "source_url": "https://github.com/InternLM/WildClawBench/blob/main/tasks/01_Productivity_Flow/01_Productivity_Flow_task_3_bibtex.md",
+        "task_sha256": "290e21b5f2e328bb3199508b102b63ec99c7bef28a6e8dd17bcb3f997b9b5a0a",
+        "grader_sha256": "31577417f6672870f88c8bc896f076c4a10d81690dc59d9bf249b0e3eab5a285",
+        "fixture_sha256": {
+          "2489e1b1a4830c47c93322340d8a9f61.pdf": "a2628f5fa215d4a5f509d743bce90cd90df6ca148e458bea22238ee30a940b33",
+          "2959f681e57b94946d8d83e63108743b.pdf": "d3058b36775fbd7bd52182365c0c21f2ff2b7f183d1dd059b48921516558a1ef",
+          "4de47fd19b562f6d80b38ca25c100e34.pdf": "89ad711d0759cb649810e98f5c576d0fab97fe121c0b2402ef6f7d517be0a9de",
+          "4fb4a8c10c244047b34b98f0802ef736.pdf": "0c98c6b601a0484662b4a2260982cdf15be842e2f467942111d4a291582ea359",
+          "695b9b59dee6083f338f50f697bbc0a8.pdf": "7e37500eaf2a306bb843a6732a9718338f99c326b508f561330cd911497f7910",
+          "6d7048c05f54c7810f325586cb691275.pdf": "b4eca60ae9d3c1548242da02ece0e2f35ce23d3a983255830d98212aa92e3167",
+          "757d0bb0887db877663297fbb1ac0f93.pdf": "aa25bbf27fedcae1b413dddfe020af31b2cb63ada049489893661f25a8e46d0a",
+          "89c977567a6162eb19c09946d25d4e7f.pdf": "191c3283f7f629df42adcf0569aad1ec4adf54d9e2f5d47214aff44259fe4a2e",
+          "a1545d8c44f7879527b4bfdc2d550962.pdf": "58e79fd6452531b9a388d8c7535866d61f9a2260d4b70b776ca7a95594a78d02",
+          "a9c8098ce76332faaa6e24a10098bd88.pdf": "3aabe3df8373c5e36754bd0536e9983b3c6643cd225025fd0e077a2fb3af3702",
+          "b059bfe6b011cb483c719fd293f13f7b.pdf": "b30c981018bb592e3e06c76b32ba2e7c520f3a9f96e876e05102c0aaa2f893ce",
+          "b8b730d1313f51fef24a5a81e46e292f.pdf": "345e4e52c460951c0f2a301c5b020665e51a32db2b6cd711a63a1ebf62f77b19",
+          "ce85fc04493b4ec6ab8e4d174ddbe8e1.pdf": "2b6dcf9cfb435f678ca028daf9f6aab1e6bd64000ebf5309776d790655086a3e",
+          "d197b59e06827356f606ff41a479f4ee.pdf": "c66955ad9c73de23c05255f7b3ee0723a96140086e859aac3480b3450c1307b7",
+          "d2bcd6b1d8428116ffe3df31e783e72a.pdf": "6cc20b3c5b8d25b8b53868fc4ec1792c144f07d67bdf7395138efd4422197e7b",
+          "e4b6db4b71fd970057e5b48a2e4e26ea.pdf": "fdd2751ea3f3c4b868fc6268bb1424d5a160f9b7fa6c48cba51af372ec8b2732",
+          "e522f06ccdb0216fef37f1b591d9dc1f.pdf": "31dddf0cee705b926a773f69650cc6de5044398fca299cca919fe7dc0c76ad43",
+          "e5f870f54750f54b87de5634c9d5e075.pdf": "c1984bb50a5b90fddb895fdc3a0f72e5bc977148c9f63ef6040cbe7a3e1f0d98",
+          "e9b81fe821dc398c0644e1dda2fab714.pdf": "b5b9fd2aef0f45e722d7fc80aec389b31e8b5ec7e0fa1c4899ed635405838c5f",
+          "f62a2ebbbe16dc365c992371aff60ea2.pdf": "4dd2fe06adb949db64404f4007bd5c82243be1e8b14de573e8e3d7a267055300",
+          "fe790c3e46d18e0c3d6ed08a26d1e322.pdf": "4cb58cc5ad3735dae1c3e49e988a2dd6b01e608eb0e43d20b0b8266efd11e94c",
+          "2203.02155.bib": "adbbb77d14c26aa12168869a613362544b24a008fa473dd42a77ddb90cc90bc9",
+          "2301.12597.bib": "4cb7e1e762523fa3478a8bcaf4e12efbc7313e7947c06de18622860da5e3cc2e",
+          "2306.13549.bib": "44f2273790243a00665642dcf0bf6e3a45817b33f221a3f24eab43b1f1d8c158",
+          "2308.12966.bib": "382fc8aa922a8833cb97d20c5d31cf27be61a4f8be34bf1babd025ea854ef111",
+          "2309.02031.bib": "dd6d6ec5af11dd5ad8cd3d0835a6dd3f68be5737395fac6cc8d07d6b353f9d69",
+          "2402.03300.bib": "5481d4d502d86d11b18e5af4ee58ee62d654138cc45f6590780cfcccc5630073",
+          "2501.07888.bib": "25a6e9756a35d40561d2bc220cdeb73d70bb39025100f171139b4dfcdcd48cf2",
+          "2502.05173.bib": "96ab54baa8dbd97bc5d1023ed08fd91ba9d62680588cafdb4bafd8d3076ea11a",
+          "2502.05178.bib": "2fcc75060b8c05f6447aaa85e1deb2cd24b78deab3b81469efcbf628c2bfd4f9",
+          "2505.12716.bib": "bb29b683225af05ed7cf63876caaa3b3161c0dbeb0edbd86e8a493425066d1c4",
+          "2506.16419.bib": "b25ac2eae52b2298b31fa6d2ebf4f08835d77b983869a2b1b86153055b1ba573",
+          "2506.23639.bib": "704f0fa4e3560fbeca39f7208806044cb9e0f269efc960f3c749e9c90bf57446",
+          "2511.08567.bib": "8540906d7d287f3226acfa43aa683a7f1df35874d60376583d5eb282f7960919",
+          "2511.10134.bib": "6b78254316549ec9786232e9828d2333ad0c5efe7c377e39b85659fefc18b605",
+          "2511.19661.bib": "f399af917188b4be1e133b2b64ff0483fa5ce13e5d5a029b4a8b05b547026eaf",
+          "2511.22570.bib": "c8919f5c0a266bd0323ebe3fdc10b16f0824b89fd597adab3881939c1262216f",
+          "2512.16922.bib": "96129c321a3c12c4dbb5bbce57a4807ac8f928cfbae3e344f02e0e9532b9d038",
+          "2512.23020.bib": "ae7cb390244b7d0ae60f456685adc02aa26e0d8f351a4471eec60328b9f715c9",
+          "2512.23219.bib": "1430e4003c0459bf5955fd912850f22510611c5611711f624df38738d9fa44ed",
+          "2512.24271.bib": "9ac622e74ffbc1dba4bafd617ee7cb7d5e215743224234a3e2c1f299bc293bc2",
+          "gt_manifest.json": "24585b48632cbfeda8493efbaf77e4ee493152ad8784def348188d029e83189d"
+        },
+        "adaptation": "Workspace and private ground-truth paths only; official scoring unchanged.",
+        "note": "官方题目、附件及原评分器；本次采用 RSI/Pi、每题最多三小时和 baseline 底线采纳规则，非官方限时排行榜复现。"
+      },
+      "verifier_authority": null,
+      "limits": {
+        "max_seconds": 10800,
+        "agent_timeout": null,
+        "verifier_timeout": null,
+        "max_agent_calls": 10000,
+        "max_verifier_calls": 10000,
+        "max_rounds": 1000,
+        "parallelism": 2,
+        "verification_repeats": 2
+      },
+      "acceptance": [],
+      "queue_position": 1,
+      "queue_batch": "20261116-three-tasks-baseline-v2",
+      "started_at": null,
+      "deadline": null
+    },
+    {
+      "id": "20261116-182333-2d188fd5",
+      "question": "排队 1/3 · 论文原始 LaTeX 表格恢复（最多3小时）",
+      "mode": "custom",
+      "status": "running",
+      "created_at": 1794824613.5008051,
+      "running": true,
+      "agent_calls": 2,
+      "verifier_calls": 0,
+      "round_index": 0,
+      "known_tokens": 7327,
+      "validated_experience_count": 0,
+      "reason": "",
+      "retention_review": null,
+      "attachments": [],
+      "fixture": false,
+      "benchmark": {
+        "suite": "WildClawBench",
+        "task_id": "01_Productivity_Flow_task_2_table_tex_download",
+        "category": "01_Productivity_Flow",
+        "label": "论文原始 LaTeX 表格恢复",
+        "source_url": "https://github.com/InternLM/WildClawBench/blob/main/tasks/01_Productivity_Flow/01_Productivity_Flow_task_2_table_tex_download.md",
+        "task_sha256": "295db930a2354d545b9a6eca32db8710a9faa78b5083f0944061ce3a2af8d12f",
+        "grader_sha256": "de891b3a1bc626da08e8a71ed3fe22ec071a719ed939303e8411376d407aca60",
+        "fixture_sha256": {
+          "1.tex": "fcb0c72ba204838665cf11a8cacda22d0bd7d339b702f4eb9418459204a63a3b",
+          "10.tex": "6cbb0ce22895a39fd7dfa376a51ca5c5a3af0e3bcaa536fe4e40056f00eaa66b",
+          "11.tex": "1f3cb79e8938e6e92ce460cdc299f9b54c3f6a3e578e0c9beed5d306c07ee430",
+          "12.tex": "96d734d800593e193949af82ce196bffa42f8faddae971541f495f7556a6cb37",
+          "13.tex": "ccfa5fc6bca52d22028155a4253db5803bd033a2c57a6c5551119315ffafaee1",
+          "14.tex": "1fdf923ff8a6042caadc9ab927f856a86b152814ee28afbbf8de3b6e1b0d0f18",
+          "15.tex": "5482f4cea8ebb25c3f6cb609229e64f99f96ef066c6428237ae0967d84888092",
+          "16.tex": "16df0b843bec99d2d64dba21f2814b739a31e741ec9b00910cb4a2ce76605f83",
+          "17.tex": "9dc5a4c0154b150fa227a3648af5cb2f19ff1d425a10a1e7f5f333b2003335be",
+          "18.tex": "fd25ef33f99f662217287be0b435ae65423ad22adb11548f6410c320e1f02ef2",
+          "2.tex": "761ba71684e8b928ba6f96ae840a3a57557dd167b6b360efae3481debf9c7aac",
+          "3.tex": "ca572b597c2b667ccd0d903987c9620c291b9cc983215847c3c8957e704fd5fd",
+          "4.tex": "f4eac79a120466d809afd619a7e18c4dccc2272d00043fc94bffe5201b252e01",
+          "5.tex": "b65d91d1461b5bb2eb3debbcc278d86197f34a0e178657152b50d88fd347e6c8",
+          "6.tex": "d5864ad1983f703dfa98aabb22a3a6e9a59efebc88c80c13f91d21e785188dbf",
+          "7.tex": "6ef3df8c5c6ae0fc9e8c3e1e535a6ed38cc45574237896678cce5da0fcb9787f",
+          "8.tex": "3ca5f89eb2e2f8df2ac810808fc4feee303cc11b2153b81196e1a49a20b6cdda",
+          "9.tex": "2698cc1b6f448ce7810bb6b8d430f586c206e1e2011209604c525b34dce66f1a"
+        },
+        "adaptation": "Workspace and private ground-truth paths only; official scoring unchanged.",
+        "note": "官方题目、附件及原评分器；本次采用 RSI/Pi、每题最多三小时和 baseline 底线采纳规则，非官方限时排行榜复现。"
+      },
+      "verifier_authority": "user_provided",
+      "limits": {
+        "max_rounds": 1000,
+        "max_agent_calls": 10000,
+        "max_verifier_calls": 10000,
+        "max_seconds": 10800,
+        "agent_timeout": null,
+        "verifier_timeout": null,
+        "parallelism": 2,
+        "verification_repeats": 2,
+        "max_tokens": null,
+        "max_cost_usd": null
+      },
+      "acceptance": [
+        "Identify and obtain the original arXiv source package for arXiv:2501.07888.",
+        "Extract every LaTeX table environment from the paper source in the order the tables appear in the paper.",
+        "Save each recovered table as a separate contiguous file results/1.tex, results/2.tex, results/3.tex, ... with no skipped numbers.",
+        "Each numbered file must contain exactly one original LaTeX table environment copied from the source package.",
+        "Preserve the original table content and formatting as closely as possible; do not merge multiple tables into one file.",
+        "Do not add explanations, markdown fences, or prose around any table.",
+        "Remove the downloaded source package after extraction.",
+        "Generate only the required output files in the results directory."
+      ],
+      "queue_position": null,
+      "queue_batch": "20261116-three-tasks-baseline-v2",
+      "started_at": 1794824614.064656,
+      "deadline": 1794835414.148297
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "profile": {
+    "provider": "zhizengzeng",
+    "id": "deepseek-v4.1-flash",
+    "input": [
+      "text"
+    ],
+    "contextWindow": 131072,
+    "maxTokens": 32768
+  },
+  "file_transport": "Copied as workspace artifacts; binary content is not automatically injected as a multimodal message.",
+  "images": "Current profile declares text only; Pi read warns that image is omitted for such models. External OCR/vision tool or a vision profile is required.",
+  "video": "No native video ingestion/decoding/transcription pipeline in current controller.",
+  "skills": "Pi supports explicit --skill path; this trial tests a supplied SKILL.md without changing controller code.",
+  "local_pi_source_hashes": {
+    "docs/skills.md": "5b9805525b194474ef1fe5455a0917ef15ed7f710aa9bec2eee11879556469e5",
+    "dist/core/tools/read.js": "6be7949968968f42a17ccbe341008db3f061cc1d757b42ff1d269bb0d4cc66f1"
+  }
+}

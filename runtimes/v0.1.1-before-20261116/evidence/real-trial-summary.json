@@ -1,0 +1,59 @@
+[
+  {
+    "test": "real_evolution",
+    "status": "solved",
+    "reason": "Revised experience passed fresh repeated environmental verification",
+    "agent_calls": 6,
+    "verifier_calls": 5,
+    "round_index": 1,
+    "known_tokens": 434955,
+    "unknown_usage_calls": [],
+    "unknown_cost_calls": [
+      "bootstrap",
+      "decision-0",
+      "round-0-candidate-1",
+      "round-0-candidate-0",
+      "round-0-candidate-1-validation-0",
+      "round-0-candidate-1-validation-1"
+    ],
+    "total_model_cost_usd": null,
+    "baseline_origin": "existing_artifact_no_agent",
+    "verifier_authority": "user_provided",
+    "validated_experience_count": 1,
+    "backend": {
+      "type": "pi",
+      "provider": "zhizengzeng",
+      "model": "deepseek-v4.1-flash"
+    },
+    "verifier_sha256": null,
+    "qualification": "Small functional goal; not a performance benchmark. Minor recovery/runtime discovery changes followed these trials and passed the final automated suite."
+  },
+  {
+    "test": "question_auto_verifier",
+    "status": "solved",
+    "reason": "Initial method passed independent repeated verification",
+    "agent_calls": 5,
+    "verifier_calls": 3,
+    "round_index": 0,
+    "known_tokens": 165075,
+    "unknown_usage_calls": [],
+    "unknown_cost_calls": [
+      "bootstrap",
+      "bootstrap-json-repair",
+      "baseline",
+      "baseline-validation-0",
+      "baseline-validation-1"
+    ],
+    "total_model_cost_usd": null,
+    "baseline_origin": "agent_execution",
+    "verifier_authority": "agent_proposed",
+    "validated_experience_count": 0,
+    "backend": {
+      "type": "pi",
+      "provider": "zhizengzeng",
+      "model": "deepseek-v4.1-flash"
+    },
+    "verifier_sha256": "d44a5e9e9039bb9fef5f81fe07fc96a272335c12f66784667bf49d807c4c2862",
+    "qualification": "Small functional goal; not a performance benchmark. Minor recovery/runtime discovery changes followed these trials and passed the final automated suite."
+  }
+]

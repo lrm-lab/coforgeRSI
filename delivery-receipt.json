@@ -1,0 +1,28 @@
+{
+  "directory": "/home/jianghp3/rsi-web-20261114",
+  "url": "http://10.110.158.144:18766",
+  "service": "rsi-web-demo.service",
+  "source_manifest_verified": true,
+  "runtime_manifest_verified": true,
+  "health": {
+    "ok": true,
+    "version": "1.0",
+    "runtime": "0.1.1",
+    "fixture": false,
+    "model": "zhizengzeng/deepseek-v4.1-flash",
+    "max_upload_bytes": 134217728,
+    "default_time_limits": null
+  },
+  "public_deployment": false,
+  "existing_runtime_modified": false,
+  "finalized_at": 1794656054.941351,
+  "real_model_jobs_solved": 2,
+  "real_model_agent_calls": 10,
+  "remaining_active_jobs": 0,
+  "changed_web_files": [
+    "WEB-VALIDATION.md",
+    "evidence/web-real-runs.json",
+    "server.py",
+    "test_web.py"
+  ]
+}

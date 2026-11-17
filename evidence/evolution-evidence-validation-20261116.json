@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-16T05:46:41.378690+00:00",
+  "tests": {
+    "evolution_classification": 8,
+    "existing_trace_config_and_files": 14,
+    "http_integration": 1,
+    "passed": 23
+  },
+  "browser": {
+    "star": "initial_verified",
+    "preset_demo": "validated_improvement with preset-artifact limitation",
+    "revision_candidates": 2,
+    "confirmed_new_experiences": 1,
+    "attempt_table_rows": 5,
+    "desktop_mobile": true,
+    "page_errors": 0
+  },
+  "new_model_calls": 0,
+  "controller_or_task_records_modified": false
+}

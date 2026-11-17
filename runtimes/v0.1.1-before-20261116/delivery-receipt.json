@@ -1,0 +1,34 @@
+{
+  "version": "0.1.1",
+  "delivered_at_utc": "2026-11-14T10:58:55Z",
+  "directory": "/home/jianghp3/general-rsi-20261114-v0.1.1",
+  "source_manifest_sha256": "0cf13545b8381539170f66342a87ca1fd0270edb19de13e146ab487b3c2f1280",
+  "source_manifest_verified": true,
+  "doctor": {
+    "python": "3.12.3",
+    "backend_type": "pi",
+    "executable_found": true,
+    "executable": "/home/jianghp3/.local/bin/pi",
+    "provider": "zhizengzeng",
+    "model": "deepseek-v4.1-flash",
+    "env_file_exists": false,
+    "model_called": false,
+    "note": "Runtime presence does not prove credentials/model availability; run a small real goal."
+  },
+  "tests": {
+    "returncode": 0,
+    "summary": "----------------------------------------------------------------------\nRan 32 tests in 9.664s\n\nOK"
+  },
+  "default_time_limits": {
+    "max_seconds": null,
+    "agent_timeout": null,
+    "verifier_timeout": null
+  },
+  "resource_budgets_retained": true,
+  "manual_cancellation_tested": true,
+  "old_runtime_modified": false,
+  "old_gaia_results_modified": false,
+  "new_model_calls": 0,
+  "qualification": "GAIA real-model results belong to0.1.0 with its original180-second trial cap. The0.1.1 change removes default time caps; verified with32 local/remote checks, not presented as a new GAIA rerun.",
+  "ready": true
+}

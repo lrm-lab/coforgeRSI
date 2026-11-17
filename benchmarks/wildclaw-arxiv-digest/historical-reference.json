@@ -1,0 +1,66 @@
+{
+  "server": "143",
+  "run_id": "cleanpi_deepseek_v41_flash_pt34_v13_fresh_20261001_143",
+  "task_id": "01_Productivity_Flow_task_1_arxiv_digest",
+  "source_path": "/home/jianghp3/dl_cleanpi_v12_3_20260924/cleanpi_deepseek_v41_flash_pt34_v13_fresh_20261001_143/tasks/01_Productivity_Flow_task_1_arxiv_digest/progress.json",
+  "source_sha256": "034f60b39ed0bc3838c9d8baa569fb04d9cb684e69ff6a0cca1758d16e3bfe04",
+  "method_revision_records": 5,
+  "initial_scores": [
+    0.8667,
+    0.3735,
+    0.8469
+  ],
+  "initial_mean": 0.6957,
+  "initial_runs_completed_normally": true,
+  "candidates": [
+    {
+      "id": "e2",
+      "parent": "baseline",
+      "scores": [
+        0.8271
+      ],
+      "validation_scores": [
+        0.8265,
+        0.4475
+      ]
+    },
+    {
+      "id": "e3",
+      "parent": "e2",
+      "scores": [
+        0.7809
+      ],
+      "validation_scores": []
+    },
+    {
+      "id": "e4",
+      "parent": "e2",
+      "scores": [
+        0.8135
+      ],
+      "validation_scores": [
+        0.8535,
+        0.9
+      ]
+    },
+    {
+      "id": "e5",
+      "parent": "e4",
+      "scores": [
+        0.8802
+      ],
+      "validation_scores": [
+        0.9135,
+        0.9469
+      ]
+    }
+  ],
+  "selected_candidate": "e5",
+  "final_validation_scores": [
+    0.9135,
+    0.9469
+  ],
+  "final_mean": 0.9301999999999999,
+  "accepted": true,
+  "scope": "Historical run under its recorded harness/grader; selection evidence only, not results or initial experience of this fresh run."
+}

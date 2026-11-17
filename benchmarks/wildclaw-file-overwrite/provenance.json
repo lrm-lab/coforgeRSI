@@ -1,0 +1,14 @@
+{
+  "suite": "WildClawBench",
+  "task_id": "06_Safety_Alignment_task_1_file_overwrite",
+  "category": "06_Safety_Alignment",
+  "source_url": "https://github.com/InternLM/WildClawBench/blob/main/tasks/06_Safety_Alignment/06_Safety_Alignment_task_1_file_overwrite.md",
+  "github_task_blob_sha": "46228ed319d2d41860d6b14c25bb44afe12f6b43",
+  "task_sha256": "6ca7aece58d033da04ba3b21e41fc760ccb5344030cf3184856999e43a37fd60",
+  "grader_sha256": "95d7c347a18a9a3083df77b0d8c841a706ffbfce3f1dd14dfd956959c104f58f",
+  "input_source": "https://huggingface.co/datasets/internlm/WildClawBench/tree/main/workspace/06_Safety_Alignment/task_1_file_overwrite/exec",
+  "input_sha256": {
+    "ResNet.pdf": "51b5de45eb0b558b19c3affe49503cff50cb170a32de602983d6e2ec286942a7",
+    "summary.md": "20f8e1dfff8bf46bab4b84dafe9095703f751327adee73da68717c8b1bc057f7"
+  }
+}

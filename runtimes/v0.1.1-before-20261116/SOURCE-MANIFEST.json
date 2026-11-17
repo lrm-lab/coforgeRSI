@@ -1,0 +1,36 @@
+{
+  "version": "0.1.1",
+  "sha256": {
+    ".gitignore": "487b523ea4fd8d73e2f22e8bf7d5a655e197e9617fe89fcef78e221c6c607cad",
+    "INPUTS.md": "ab05d429f2cdb0f6b38dadb627a099dc98219146f6e1176476311340c4a0d38a",
+    "PROVENANCE.md": "b549f96fba5a8861f2746c335a71129646c9b07513bad822b4b187da39affb6f",
+    "README.md": "b0fec07a765f2fee6a2182549dfa92c40653ba3c21d26d9f25813a434e96aff7",
+    "VALIDATION.md": "7af9cd06dbcd8a39ec2d162ae430ca34b112af0fc0f88ef533c8321ddffc7df8",
+    "evidence/gaia-trial-summary.json": "956f38d4bad921408e70edc7d27147e311cf3eb622b75fcd1016227d0e55da72",
+    "evidence/real-trial-summary.json": "78e6edc600f0ad6537b29c041ae51185d4049e14f206f937199c204bc3c513a4",
+    "evidence/research-manifest.json": "d248f7bc9e7ec96a540bd104d171977033c1e48f745b535436da209ade62ec6f",
+    "examples/demo.json": "4aef8318303e5f62fab501831d813dad343781914a469230c3acd982e34666ce",
+    "examples/demo_agent.py": "a6b07151f13f606810bca9d0536052ef8beee00f1f682533ef49a0599b1d1da6",
+    "examples/demo_verifier.py": "93c0d584888ffbe6f5b4bfc83d50b1debdfb30fc61cd3b695380c34a1858e9ab",
+    "examples/nexau_research_bridge.py": "e8c1ee63270a5e2c35d4726da2dfa8539294eee87eff4269322ed73e153f33b2",
+    "examples/pi.json": "c0fb6056766a5015c1e4229aa7ce09ba9ceb25098b9ff2970881825f55a96917",
+    "examples/skills/spreadsheet-evidence/SKILL.md": "63c9052460d4d1a7fa8ecec6b83842d2ab92a5df3ba297fcabbc122271d89dda",
+    "general_rsi/__init__.py": "8c3e6fee9f6b283121e3d8e2f1473d9de82bb02ada87084bf81f44a8c805e33a",
+    "general_rsi/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "general_rsi/backend.py": "eadd4956a444b7349d46e46f64cb31100d7476a84f29bef126452f7de09d8088",
+    "general_rsi/cli.py": "4ec31159192998b0a34afbc47dc95403f8c0b95490e0536bc79a09ea747f0553",
+    "general_rsi/engine.py": "24fb3cbb7e47b72548319b962485239f864f675325a0da5795d8ae23b52ebd51",
+    "general_rsi/prompts.py": "934b5dbc952976f912e378ed9e3635d6ce60746df0e01d075c6eae5af896f16e",
+    "general_rsi/protocol.py": "bc4a5100a21c66ef0c126743e3b0e1bf44f1dae1413bad5c457afdb8aac235cf",
+    "general_rsi/storage.py": "56135b872beb888dff3b37045c16b2bf47f19fb7dce276829cb917da1f3c4d96",
+    "pyproject.toml": "d8dac6a06144189bc29ef08177d55812491198c73847d292bc2c9dca0c662296",
+    "run.sh": "0669da96d3fe93228d0e5a01933ce403a4034fd445c447b7d996303365325751",
+    "tests/test_rsi.py": "b348232b844b0559a597cb01a0c196ddd0508f73e82800e6cc191555be1f955a"
+  },
+  "excludes": [
+    "SOURCE-MANIFEST.json",
+    "delivery-receipt.json",
+    "__pycache__",
+    "*.pyc"
+  ]
+}

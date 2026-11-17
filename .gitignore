@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+*-venv/
+node_modules/
+private/
+data/
+backups/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+benchmarks/**/queued-run.json
+benchmarks/**/input/*.tar
+benchmarks/wildclaw-task_3_bibtex/input/
+benchmarks/**/private/

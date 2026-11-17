@@ -1,0 +1,29 @@
+{
+  "date_utc": "2026-11-17",
+  "regression_tests": {
+    "controller": 41,
+    "web": 39,
+    "passed": true,
+    "latest_changed_modules_recheck": 7
+  },
+  "real_saved_outputs_replayed": [
+    "decision-5",
+    "decision-5-json-repair"
+  ],
+  "real_saved_outputs_parse": true,
+  "browser": {
+    "retained_experiences": 3,
+    "repeat_scores": [
+      0.98,
+      0.98
+    ],
+    "switch_and_full_download": true,
+    "partial_artifacts": true,
+    "retained_version_default": true,
+    "mobile_overflow": false,
+    "replay_navigation": true,
+    "page_errors": []
+  },
+  "new_model_calls": 0,
+  "historical_state_modified": false
+}

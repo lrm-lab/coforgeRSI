@@ -1,0 +1,31 @@
+{
+  "suite": "WildClawBench",
+  "task_id": "01_Productivity_Flow_task_2_table_tex_download",
+  "category": "01_Productivity_Flow",
+  "label": "论文原始 LaTeX 表格恢复",
+  "source_url": "https://github.com/InternLM/WildClawBench/blob/main/tasks/01_Productivity_Flow/01_Productivity_Flow_task_2_table_tex_download.md",
+  "task_sha256": "295db930a2354d545b9a6eca32db8710a9faa78b5083f0944061ce3a2af8d12f",
+  "grader_sha256": "de891b3a1bc626da08e8a71ed3fe22ec071a719ed939303e8411376d407aca60",
+  "fixture_sha256": {
+    "1.tex": "fcb0c72ba204838665cf11a8cacda22d0bd7d339b702f4eb9418459204a63a3b",
+    "10.tex": "6cbb0ce22895a39fd7dfa376a51ca5c5a3af0e3bcaa536fe4e40056f00eaa66b",
+    "11.tex": "1f3cb79e8938e6e92ce460cdc299f9b54c3f6a3e578e0c9beed5d306c07ee430",
+    "12.tex": "96d734d800593e193949af82ce196bffa42f8faddae971541f495f7556a6cb37",
+    "13.tex": "ccfa5fc6bca52d22028155a4253db5803bd033a2c57a6c5551119315ffafaee1",
+    "14.tex": "1fdf923ff8a6042caadc9ab927f856a86b152814ee28afbbf8de3b6e1b0d0f18",
+    "15.tex": "5482f4cea8ebb25c3f6cb609229e64f99f96ef066c6428237ae0967d84888092",
+    "16.tex": "16df0b843bec99d2d64dba21f2814b739a31e741ec9b00910cb4a2ce76605f83",
+    "17.tex": "9dc5a4c0154b150fa227a3648af5cb2f19ff1d425a10a1e7f5f333b2003335be",
+    "18.tex": "fd25ef33f99f662217287be0b435ae65423ad22adb11548f6410c320e1f02ef2",
+    "2.tex": "761ba71684e8b928ba6f96ae840a3a57557dd167b6b360efae3481debf9c7aac",
+    "3.tex": "ca572b597c2b667ccd0d903987c9620c291b9cc983215847c3c8957e704fd5fd",
+    "4.tex": "f4eac79a120466d809afd619a7e18c4dccc2272d00043fc94bffe5201b252e01",
+    "5.tex": "b65d91d1461b5bb2eb3debbcc278d86197f34a0e178657152b50d88fd347e6c8",
+    "6.tex": "d5864ad1983f703dfa98aabb22a3a6e9a59efebc88c80c13f91d21e785188dbf",
+    "7.tex": "6ef3df8c5c6ae0fc9e8c3e1e535a6ed38cc45574237896678cce5da0fcb9787f",
+    "8.tex": "3ca5f89eb2e2f8df2ac810808fc4feee303cc11b2153b81196e1a49a20b6cdda",
+    "9.tex": "2698cc1b6f448ce7810bb6b8d430f586c206e1e2011209604c525b34dce66f1a"
+  },
+  "adaptation": "Workspace and private ground-truth paths only; official scoring unchanged.",
+  "note": "官方题目、附件及原评分器；本次采用 RSI/Pi、每题最多三小时和 baseline 底线采纳规则，非官方限时排行榜复现。"
+}

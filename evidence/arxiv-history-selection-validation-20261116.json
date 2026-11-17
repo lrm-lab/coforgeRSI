@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-16T06:41:52.274154+00:00",
+  "job_id": "20261116-141624-4f74a96d",
+  "historical_source_sha256": "034f60b39ed0bc3838c9d8baa569fb04d9cb684e69ff6a0cca1758d16e3bfe04",
+  "raw_history_archived": true,
+  "historical_mean": [
+    0.6957,
+    0.9301999999999999
+  ],
+  "historical_revision_records": 5,
+  "executed_candidate_versions": 4,
+  "current_initial_memory": "empty",
+  "browser_history_separate": true,
+  "source_link": true,
+  "grader_path_adapter_empty_score": 0,
+  "result_priority_over_cache_test": true,
+  "controller_preserved": true,
+  "historical_baseline_normal_completions": true,
+  "current_status": "running",
+  "current_agent_calls": 4,
+  "current_verifier_calls": 0
+}

@@ -1,0 +1,10 @@
+{
+  "suite": "WildClawBench",
+  "task_id": "01_Productivity_Flow_task_1_arxiv_digest",
+  "category": "01_Productivity_Flow",
+  "source_url": "https://github.com/InternLM/WildClawBench/blob/main/tasks/01_Productivity_Flow/01_Productivity_Flow_task_1_arxiv_digest.md",
+  "github_task_blob_sha": "75ba6b9945cc235ce3a983d4ef65a3765dc8f20f",
+  "task_sha256": "44782c62b164a1b0a61c7a5664d98ad34fbb044970ee83fe9cb99e8c695d1c70",
+  "grader_sha256": "4da632a1f5b80d74bee264912ad99157b24a8ceaf50002e181554e93ffdbec14",
+  "historical_reference_sha256": "4e5a68432bb082c8135f42311b0c7eab2baa1e059d200848b679833704088195"
+}

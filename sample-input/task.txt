@@ -1,0 +1,1 @@
+Find integer x in the closed interval [-20,20] minimizing (x-7)^2. Write result.json with exactly an integer field x. Preserve task.txt.
