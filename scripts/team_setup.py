@@ -88,11 +88,6 @@ def receive_credentials(refresh=False):
                                 input=json.dumps(payload), text=True, capture_output=True)
         if result.returncode:
             raise SystemExit('无法创建团队配置请求；请检查 GitHub 登录状态、仓库 Issues 和 Actions 是否已启用。')
-        request = json.loads(result.stdout)
-        if request.get('author_association') not in ('MEMBER', 'OWNER', 'COLLABORATOR'):
-            subprocess.run(['gh', 'api', '--method', 'PATCH', f"repos/{REPO}/issues/{request['number']}",
-                            '-f', 'state=closed'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            raise SystemExit('此 GitHub 账户不是 lrm-lab 成员或仓库协作者，无法领取团队凭据。')
         deadline = time.monotonic() + 600
         job = None
         last_status = None
@@ -111,7 +106,7 @@ def receive_credentials(refresh=False):
         if not job or job['status'] != 'completed':
             raise SystemExit('领取配置等待超时，可重新运行 ./setup.sh；无需输入 API key。')
         if job['conclusion'] != 'success':
-            raise SystemExit('配置工作流失败，请查看：' + job['url'])
+            raise SystemExit('配置工作流失败，请查看：' + job['url'] + '\n新加入成员请让管理员运行 python3 scripts/sync_team_access.py 后重试。')
         run(['gh', 'run', 'download', str(job['databaseId']), '-R', REPO,
              '--name', f'rsi-credentials-{request_id}', '--dir', str(folder)])
         decrypted = subprocess.run(['openssl', 'cms', '-decrypt', '-binary', '-inform', 'DER',

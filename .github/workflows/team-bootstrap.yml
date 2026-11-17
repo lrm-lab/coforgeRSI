@@ -26,6 +26,7 @@ jobs:
         id: authorize
         env:
           GH_TOKEN: ${{ github.token }}
+          RSI_TEAM_MEMBER_IDS: ${{ secrets.RSI_TEAM_MEMBER_IDS }}
         shell: bash
         run: |
           python3 - <<'PY'
@@ -37,14 +38,10 @@ jobs:
               result = subprocess.run(['gh', 'api', f"repos/{os.environ['GITHUB_REPOSITORY']}/issues/{number}"],
                                       check=True, capture_output=True, text=True)
               issue = json.loads(result.stdout)
-              association = issue['author_association']
               assert issue['user']['id'] == event['issue']['user']['id'], 'Requester mismatch'
-              if association not in ('MEMBER', 'OWNER', 'COLLABORATOR'):
-                  # Installation tokens may not see private organization membership.
-                  # This endpoint checks actual repository access, including read-only team grants.
-                  subprocess.run(['gh', 'api', f"repos/{os.environ['GITHUB_REPOSITORY']}/collaborators/{issue['user']['login']}"],
-                                 check=True, capture_output=True)
-                  association = 'COLLABORATOR'
+              allowed = json.loads(os.environ.get('RSI_TEAM_MEMBER_IDS') or '[]')
+              assert issue['user']['id'] in allowed, 'Not in the approved team roster; ask an admin to sync access'
+              association = 'COLLABORATOR'
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
               output.write('association=' + association + '\n')
           print('Requester membership verified.')
