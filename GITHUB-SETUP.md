@@ -32,7 +32,7 @@ cd coforgeRSI
 
 仓库的 Actions Secrets 已配置 `RSI_WEB_MODEL_API_KEY` 和 `RSI_PI_MODELS_JSON`。前者是实际模型 key，后者是线上模型配置，key 字段只引用前者。原部署的 Agent 与语义评分器使用同一凭据；网页没有单独的登录密码。
 
-GitHub Secrets 不会随 git clone 下发，也没有读取明文的 API。`setup.sh` 为每次领取临时生成接收密钥，通过一条自动配置 Issue 提交公开证书；工作流仅接受 GitHub 标记为 `MEMBER`、`OWNER` 或 `COLLABORATOR` 的请求，不相信请求正文自报的身份。工作流使用 OpenSSL CMS / AES-256-GCM 加密配置，只上传密文 artifact。只有发起这次领取的本机临时私钥能解密，其他人下载该 artifact 不能得到配置。工作流不执行仓库代码，不接收凭据明文作为输入，不在日志中打印凭据。请求完成后 Issue 自动关闭，不发布评论。
+GitHub Secrets 不会随 git clone 下发，也没有读取明文的 API。`setup.sh` 为每次领取临时生成接收密钥，通过一条自动配置 Issue 提交公开证书；工作流通过 GitHub API 核验作者的组织/协作者身份。私有组织成员身份不可见时，使用 GitHub 的仓库协作者核验接口确认实际团队权限（包括只读权限），不相信请求正文自报的身份。核验成功后才加载模型 Secrets。工作流使用 OpenSSL CMS / AES-256-GCM 加密配置，只上传密文 artifact。只有发起这次领取的本机临时私钥能解密，其他人下载该 artifact 不能得到配置。工作流不执行仓库代码，不接收凭据明文作为输入，不在日志中打印凭据。请求完成后 Issue 自动关闭，不发布评论。
 
 普通公开读者和仅提交过 PR 的贡献者无法领取；PR 不触发凭据分发。管理员也可手动运行相同工作流。仓库需保持 Issues、Actions 和 artifact 可用。密文 artifact 保留一天；临时私钥在领取结束时删除。本机凭据在 `private/team-credentials.json`，目录权限 0700、文件权限 0600，已被 `.gitignore` 排除。运行进程通过环境传入 key，Pi 模型文件仍只保存变量引用。
 

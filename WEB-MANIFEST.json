@@ -2,9 +2,9 @@
   "sha256": {
     ".gitattributes": "f77376ba6cdf50baff4165dfafef61bed94e086da3361d8bbf9d85c8b00fb917",
     ".github/workflows/ci.yml": "d278d99757e485d8c0762a4867b2f63ccfeff835c0927acbc01b10b177164493",
-    ".github/workflows/team-bootstrap.yml": "746814eb2cacc0800a3f7309da932b369d7354e1ec343d7684e8da6b3c83e747",
+    ".github/workflows/team-bootstrap.yml": "d1799b8238312a016720fbdf0ef34df0a64455669c4f4bb138ee110ce8a9b424",
     ".gitignore": "fc285b7c979029511ed1903e0b376b3125e933af1b78d43f32fecd756e521848",
-    "GITHUB-SETUP.md": "f3e0078fdbd23d02c106cbb1a3ad794a33f5701661bd34fd06a429d312f786b6",
+    "GITHUB-SETUP.md": "6c34bf8187bf7b784e11d314e95fb9c07f5b276e609e94411bb1b354f7ad3ef8",
     "README.md": "1738d57f1814093266cccfdcefba8491702be4eb4aad843aa3cdd67c2a289422",
     "WEB-VALIDATION.md": "b16b6382b8897917dd05e85393cd28f70903f03fc19256eddfc1262d018984b3",
     "benchmarks/20261116-three-tasks-baseline-v2.json": "a0634461603d82e5f0268fd477746860fe7abb0f2c073e93a768dc79f0a5174a",
