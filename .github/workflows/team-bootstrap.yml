@@ -18,18 +18,38 @@ permissions:
   issues: write
 jobs:
   deliver:
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      (startsWith(github.event.issue.title, 'RSI bootstrap ') &&
-       contains(fromJSON('["MEMBER","OWNER","COLLABORATOR"]'), github.event.issue.author_association))
+    if: ${{ github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'RSI bootstrap ') }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Verify requester membership before loading model secrets
+        id: authorize
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, subprocess
+          association = 'OWNER'
+          if os.environ['GITHUB_EVENT_NAME'] == 'issues':
+              event = json.loads(pathlib.Path(os.environ['GITHUB_EVENT_PATH']).read_text())
+              number = int(event['issue']['number'])
+              result = subprocess.run(['gh', 'api', f"repos/{os.environ['GITHUB_REPOSITORY']}/issues/{number}"],
+                                      check=True, capture_output=True, text=True)
+              issue = json.loads(result.stdout)
+              association = issue['author_association']
+              assert association in ('MEMBER', 'OWNER', 'COLLABORATOR'), 'Not a team member or collaborator'
+              assert issue['user']['id'] == event['issue']['user']['id'], 'Requester mismatch'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('association=' + association + '\n')
+          print('Requester membership verified.')
+          PY
       - name: Encrypt configuration for the requesting team member
         id: encrypt
         env:
           REQUEST_ID: ${{ inputs.request_id }}
           RECIPIENT_CERT: ${{ inputs.recipient_cert }}
+          AUTHOR_ASSOCIATION: ${{ steps.authorize.outputs.association }}
           RSI_WEB_MODEL_API_KEY: ${{ secrets.RSI_WEB_MODEL_API_KEY }}
           RSI_PI_MODELS_JSON: ${{ secrets.RSI_PI_MODELS_JSON }}
         shell: bash
@@ -40,7 +60,7 @@ jobs:
           request_id, certificate = os.environ['REQUEST_ID'], os.environ['RECIPIENT_CERT']
           if os.environ['GITHUB_EVENT_NAME'] == 'issues':
               issue = event['issue']
-              assert issue['author_association'] in ('MEMBER', 'OWNER', 'COLLABORATOR'), 'Not a team member'
+              assert os.environ['AUTHOR_ASSOCIATION'] in ('MEMBER', 'OWNER', 'COLLABORATOR'), 'Not a team member'
               assert len(issue['body']) <= 16384, 'Request too large'
               request = json.loads(issue['body'])
               request_id, certificate = request['request_id'], request['recipient_cert']

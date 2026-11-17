@@ -2,7 +2,7 @@
   "sha256": {
     ".gitattributes": "f77376ba6cdf50baff4165dfafef61bed94e086da3361d8bbf9d85c8b00fb917",
     ".github/workflows/ci.yml": "d278d99757e485d8c0762a4867b2f63ccfeff835c0927acbc01b10b177164493",
-    ".github/workflows/team-bootstrap.yml": "3c3b2b687f33e827f1d5697ab36f6427412319a6f25f211163b4304087440a9f",
+    ".github/workflows/team-bootstrap.yml": "746814eb2cacc0800a3f7309da932b369d7354e1ec343d7684e8da6b3c83e747",
     ".gitignore": "fc285b7c979029511ed1903e0b376b3125e933af1b78d43f32fecd756e521848",
     "GITHUB-SETUP.md": "f3e0078fdbd23d02c106cbb1a3ad794a33f5701661bd34fd06a429d312f786b6",
     "README.md": "1738d57f1814093266cccfdcefba8491702be4eb4aad843aa3cdd67c2a289422",
