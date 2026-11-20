@@ -1,0 +1,17 @@
+services:
+  coforge-rsi:
+    image: ${COFORGE_RSI_IMAGE:-ghcr.io/lrm-lab/coforgersi:latest}
+    container_name: coforge-rsi
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/data
+    ports:
+      - "127.0.0.1:18766:18766"
+    networks:
+      - coforge-staging-apps
+
+networks:
+  coforge-staging-apps:
+    external: true
